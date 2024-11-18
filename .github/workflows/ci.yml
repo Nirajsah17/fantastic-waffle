@@ -48,7 +48,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/ # React Vite builds output to the 'dist' folder by default
+          path: ./dist # React Vite builds output to the 'dist' folder by default
 
   # Deployment job
   deploy:
