@@ -1,10 +1,7 @@
-name: React Vite CI
+name: React Vite CI and Deploy
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
@@ -21,20 +18,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Specify the Node.js version you want
-          cache: 'npm' # Caches npm dependencies (can use 'npm' if using npm)
+          node-version: '18'
+          cache: 'npm'
 
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: npm install # Replace with `npm install` if using npm
+        run: npm install
 
-      # Step 5: Build the app
+      # Step 4: Build the app
       - name: Build the app
-        run: npm run build # Replace with `npm run build` if using npm
+        run: npm run build
 
-      # Step 6: Upload build artifacts (optional)
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: build
-          path: dist/ # Vite outputs build files to the `dist` directory by default
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
