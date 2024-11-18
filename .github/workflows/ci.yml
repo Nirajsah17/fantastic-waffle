@@ -1,5 +1,5 @@
 # Workflow for building and deploying a React Vite app to GitHub Pages
-name: Deploy React Vite App to GitHub Pages
+name: Deploy fantastic_waffle GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
