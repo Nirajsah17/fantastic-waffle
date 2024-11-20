@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     const newPeer = new Peer();
-    const newSocket = io('https://signal-latest.onrender.com');
+    const newSocket = io('https://signal-v2.onrender.com');
     
     newPeer.on('open', (id) => {
       setPeerId(id);
