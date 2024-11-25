@@ -7,7 +7,7 @@ const ChatModeSelector = ({ chatMode, setChatMode, status }) => {
         onClick={() => setChatMode('video')}
         className={`px-4 py-2 rounded ${
           chatMode === 'video'
-            ? 'bg-blue-500 text-white'
+            ? 'bg-purple-700 text-white'
             : 'bg-gray-200 hover:bg-gray-300'
         }`}
         disabled={status === 'connected'}
@@ -18,7 +18,7 @@ const ChatModeSelector = ({ chatMode, setChatMode, status }) => {
         onClick={() => setChatMode('text')}
         className={`px-4 py-2 rounded ${
           chatMode === 'text'
-            ? 'bg-blue-500 text-white'
+            ? 'bg-purple-600 text-white'
             : 'bg-gray-200 hover:bg-gray-300'
         }`}
         disabled={status === 'connected'}

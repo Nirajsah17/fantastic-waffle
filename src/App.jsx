@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     const newPeer = new Peer();
-    const newSocket = io('https://signal-latest.onrender.com');
+    const newSocket = io('https://signal-v2.onrender.com');
     
     newPeer.on('open', (id) => {
       setPeerId(id);
@@ -133,10 +133,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
+    <div className="min-h-screen bg-blue-950 p-4">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-4">
-          <h1 className="text-2xl font-bold mb-4">MQTT</h1>
+        <div className="rounded-lg shadow-lg p-6 mb-4">
+          <h1 className="text-2xl font-bold mb-4">ChitChatTalk</h1>
           <ChatModeSelector 
             chatMode={chatMode} 
             setChatMode={setChatMode}
@@ -145,7 +145,7 @@ function App() {
           <p className="mb-4">Status: {status}</p>
           <button
             onClick={findPartner}
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 disabled:bg-gray-400"
+            className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-800 disabled:bg-gray-400"
             disabled={status === 'searching'}
           >
             {status === 'searching' ? 'Searching...' : 'Find Partner'}

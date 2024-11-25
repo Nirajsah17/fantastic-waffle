@@ -2,7 +2,7 @@ import React from 'react';
 
 const ChatMessages = ({ messages, message, setMessage, sendMessage, status }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
+    <div className="rounded-lg shadow-lg p-6">
       <div className="h-64 overflow-y-auto mb-4 p-4 border rounded">
         {messages.map((msg, index) => (
           <div
@@ -11,7 +11,7 @@ const ChatMessages = ({ messages, message, setMessage, sendMessage, status }) =>
           >
             <span
               className={`inline-block px-4 py-2 rounded-lg ${
-                msg.received ? 'bg-gray-200' : 'bg-blue-500 text-white'
+                msg.received ? 'bg-gray-200' : 'bg-purple-600 text-white'
               }`}
             >
               {msg.text}
@@ -31,7 +31,7 @@ const ChatMessages = ({ messages, message, setMessage, sendMessage, status }) =>
         />
         <button
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
           disabled={status !== 'connected'}
         >
           Send
