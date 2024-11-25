@@ -133,10 +133,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-blue-950 p-4">
+    <div className="min-h-screen bg-blue-950 p-4 text-white">
       <div className="max-w-4xl mx-auto">
         <div className="rounded-lg shadow-lg p-6 mb-4">
-          <h1 className="text-2xl font-bold mb-4">ChitChatTalk</h1>
+          <h1 className="text-white text-2xl font-bold mb-4">ChitChatTalk</h1>
           <ChatModeSelector 
             chatMode={chatMode} 
             setChatMode={setChatMode}
