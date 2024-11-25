@@ -11,7 +11,7 @@ const ChatMessages = ({ messages, message, setMessage, sendMessage, status }) =>
           >
             <span
               className={`inline-block px-4 py-2 rounded-lg ${
-                msg.received ? 'bg-gray-200' : 'bg-purple-600 text-white'
+                msg.received ? 'bg-gray-200' : 'bg-purple-600 text-black'
               }`}
             >
               {msg.text}
@@ -25,7 +25,7 @@ const ChatMessages = ({ messages, message, setMessage, sendMessage, status }) =>
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="flex-1 px-4 py-2 border rounded"
+          className="flex-1 px-4 py-2 border rounded text-black"
           placeholder="Type a message..."
           disabled={status !== 'connected'}
         />

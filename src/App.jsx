@@ -133,10 +133,11 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-blue-950 p-4 text-white">
+    <div className="min-h-screen bg-blue-950 p-4">
       <div className="max-w-4xl mx-auto">
         <div className="rounded-lg shadow-lg p-6 mb-4">
-          <h1 className="text-white text-2xl font-bold mb-4">ChitChatTalk</h1>
+          <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping"></span>
+          <h1 className="text-xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">ChitChatTalk</h1>
           <ChatModeSelector 
             chatMode={chatMode} 
             setChatMode={setChatMode}

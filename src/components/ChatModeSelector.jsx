@@ -18,7 +18,7 @@ const ChatModeSelector = ({ chatMode, setChatMode, status }) => {
         onClick={() => setChatMode('text')}
         className={`px-4 py-2 rounded ${
           chatMode === 'text'
-            ? 'bg-purple-600 text-white'
+            ? 'bg-purple-600 text-black'
             : 'bg-gray-200 hover:bg-gray-300'
         }`}
         disabled={status === 'connected'}
